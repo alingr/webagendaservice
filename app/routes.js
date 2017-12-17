@@ -27,6 +27,8 @@ module.exports = function (app) {
         // create a todo, information comes from AJAX request from Angular
         Todo.create({
             text: req.body.text,
+            dueDate: req.body.dueDate,
+            priority: req.body.priority,
             done: false
         }, function (err, todo) {
             if (err)
